@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Alamofire/Alamofire.xcodeproj">
+      location = "group:Alamofire-master/Alamofire.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Shougongke_swift/Shougongke_swift.xcodeproj">

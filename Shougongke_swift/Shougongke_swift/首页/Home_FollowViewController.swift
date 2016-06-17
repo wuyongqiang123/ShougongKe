@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class Home_FollowViewController: BaseViewController {
 
     override func loadView()
@@ -22,7 +21,6 @@ class Home_FollowViewController: BaseViewController {
         self.tableView?.frame = view.frame
         YYLogs(self.classForCoder)
     }
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return 10;

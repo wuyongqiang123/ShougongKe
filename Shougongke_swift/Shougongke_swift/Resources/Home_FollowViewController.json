@@ -19,7 +19,7 @@
                                     "colorfulText",
                                     {
                                     "class":"UILabel",
-                                    "textColor":"whiteColor",
+                                    "textColor":"redColor",
                                     "font":14,
                                     "text":"点击顶部状态栏，开启调试皮肤~",
                                     "layout":{"s":"c,t"}
@@ -38,7 +38,7 @@
                                     "layer.cornerRadius":15,
                                     "font":14,
                                     "addTarget":"AlterLabelText:",
-                                    "title":"点我修改文字，是真的么",
+                                    "title":"点我修改文字",
                                     "titleColor":{
                                     "normal":"greenColor",
                                     "highlighted":"redColor",
