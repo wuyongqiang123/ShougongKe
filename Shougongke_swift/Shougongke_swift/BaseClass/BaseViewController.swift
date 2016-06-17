@@ -33,11 +33,6 @@ class BaseViewController: UIViewController,UITableViewDataSource,UITableViewDele
         super.loadView()
         skinParser?.parse("selfView", view:self.view)
 
-    }
-    override func viewDidLoad()
-    {   super.viewDidLoad()
-//        self.view.backgroundColor = UIColor.clearColor()
-        self.view.spUpdateLayout()
         tableView = UITableView.init(frame: CGRectMake(0,0, AppWidth, AppHeight), style: UITableViewStyle.Plain)
         // 设置tableView的数据源
         tableView!.dataSource = self
@@ -47,6 +42,13 @@ class BaseViewController: UIViewController,UITableViewDataSource,UITableViewDele
         self.view.addSubview(tableView!)
 
     }
+    override func viewDidLoad()
+    {   super.viewDidLoad()
+//        self.view.backgroundColor = UIColor.clearColor()
+        self.view.spUpdateLayout()
+
+
+    }
     func resetTableHeaderView(tableHeaderView:UIView?) {
         let rect: CGRect = self.view.frame
         tableHeaderView!.frame = rect
@@ -54,6 +56,7 @@ class BaseViewController: UIViewController,UITableViewDataSource,UITableViewDele
         tableHeaderView?.calcHeight()
         tableView?.tableHeaderView = nil
         tableView?.tableHeaderView = tableHeaderView
+        
     }
     func createCell(identifier:String)->UITableViewCell {
         return createCell(identifier, nil)

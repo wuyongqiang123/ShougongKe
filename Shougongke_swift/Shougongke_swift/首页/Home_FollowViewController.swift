@@ -10,11 +10,15 @@ import UIKit
 
 class Home_FollowViewController: BaseViewController {
 
+    override func loadView()
+    {
+        super.loadView()
+        let headerView = skinParser?.parse("tableHeaderView")
+        resetTableHeaderView(headerView)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.frame = VCHeight
-        let headerView = skinParser?.parse("tableHeaderView")
-        resetTableHeaderView(headerView)
         self.tableView?.frame = view.frame
         YYLogs(self.classForCoder)
     }

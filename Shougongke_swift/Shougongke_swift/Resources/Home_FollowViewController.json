@@ -21,7 +21,7 @@
                                     "class":"UILabel",
                                     "textColor":"whiteColor",
                                     "font":14,
-                                    "text":"点击顶部状态栏ss，开启调试皮肤~",
+                                    "text":"点击顶部状态栏ssaa，开启调试皮肤~",
                                     "layout":{"s":"c,t"}
                                     },
                                     {
@@ -44,7 +44,7 @@
                                     "highlighted":"redColor",
                                     "selected":"yellowColor",
                                     },
-                                    "layout":{"s":"r=10,t,w=100,h=mw/2"}
+                                    "layout":{"s":"r=10,m,w=100,h=mw/2"}
                                     }
                                     ]
                       },

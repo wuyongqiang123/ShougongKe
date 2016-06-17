@@ -762,26 +762,26 @@ do\
 - (BOOL)calcHeightBase
 {
     ViewLayoutDesImp* selfDes = [self getViewLayoutDesImp];
-    
+
     if( !selfDes || selfDes->calcOnlyOneTimeMask & ERefFixedHeight)
     {
         return YES;
     }
-    
+
     if( selfDes->calcOnlyOneTimeMask & ERefMutableHeight)
     {
         selfDes->calcOnlyOneTimeMask |= ERefFixedHeight;
     }
-    
+
     CGRect selfRect = self.frame;
-    
+
     if(self.hidden && selfDes->zeroRectWhenHidden)
     {
         selfRect.size.height = 0;
         self.frame = selfRect;
         return YES;
     }
-    
+
     if(!(selfDes->style[0].mutableOri & ERefMutableHeight)
        && !(selfDes->style[1].mutableOri & ERefMutableHeight))
     {
@@ -796,6 +796,13 @@ do\
                                            return pMyselfRect;
                                        }];
                 selfRect.size.height = TheV_height;
+                self.frame = selfRect;
+                break;
+            }
+            else if(selfDes->style[i].heightRef.refView == ERefViewNone
+                    && selfDes->style[i].height < NILV)
+            {
+                selfRect.size.height = selfDes->style[i].height;
                 self.frame = selfRect;
                 break;
             }
