@@ -11,14 +11,14 @@ import UIKit
 class HomeViewController: BaseViewController {
 
     var selectIdex: Int? = 0
+    //保存起来防止重复生成VC
+    var childVCs = [UIViewController]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "首页"
 
-
         // 这个是必要的设置
         automaticallyAdjustsScrollViewInsets = false
-
         var style = SegmentStyle()
         // 标题不滚动, 则每个label会平分宽度
         style.scrollTitle = false
@@ -47,19 +47,23 @@ class HomeViewController: BaseViewController {
     }
 
     func setChildVcs() -> [UIViewController] {
-        let vc1 = Home_SelectedViewController()
-        vc1.title = "精选"
+        if(0 == childVCs.count)
+        {
+            let vc1 = Home_SelectedViewController()
+            vc1.title = "精选"
 
-        let vc2 = Home_FollowViewController()
-        vc2.title = "关注"
+            let vc2 = Home_FollowViewController()
+            vc2.title = "关注"
 
-        let vc3 = Home_MasterViewController()
-        vc3.title = "达人"
+            let vc3 = Home_MasterViewController()
+            vc3.title = "达人"
 
-        let vc4 = Home_ActivityViewController()
-        vc4.title = "活动"
+            let vc4 = Home_ActivityViewController()
+            vc4.title = "活动"
 
-        return [vc1, vc2, vc3,vc4]
+            childVCs = [vc1, vc2, vc3,vc4]
+        }
+        return childVCs;
     }
 
 }

@@ -128,6 +128,29 @@ class BaseViewController: UIViewController,UITableViewDataSource,UITableViewDele
 
     #else
     //真机上调试界面
+        var ipfile: String = NSBundle.mainBundle().resourcePath.stringByAppendingString("/ip")
+        var ipstr: String = String.stringWithContentsOfFile(ipfile, encoding: (error as! NSUTF8StringEncoding), error: nil)
+        ipstr = ipstr.stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: "\n "))
+        var filepath: String = ipstr.stringByAppendingFormat(":8000/%@.json", NSStringFromClass(self.self))
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {() -> Void in
+            var url: NSURL = NSURL(string: "http://\(filepath)")!
+            var request: NSURLRequest = NSURLRequest(URL: url, cachePolicy: NSURLRequestReloadIgnoringLocalCacheData, timeoutInterval: 10)
+            var received: NSData = NSURLConnection.sendSynchronousRequest(request, returningResponse: nil, error: nil)
+            dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                var skinParser: SkinParser = SkinParser.getParserByData(received)
+                if skinParser != nil {
+                    self.skinParser = skinParser
+                    self.loadView()
+                    self.viewDidLoad()
+                }
+                for childViewControler: BaseViewController in self.childViewControllers {
+                    if (childViewControler is BaseViewController.self) {
+                        childViewControler.freshSkin()
+                    }
+                }
+            })
+        })
+
     #endif
 
     }

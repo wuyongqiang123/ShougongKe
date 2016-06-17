@@ -21,7 +21,7 @@
                                     "class":"UILabel",
                                     "textColor":"whiteColor",
                                     "font":14,
-                                    "text":"点击顶部状态栏ssaa，开启调试皮肤~",
+                                    "text":"点击顶部状态栏，开启调试皮肤~",
                                     "layout":{"s":"c,t"}
                                     },
                                     {
@@ -29,7 +29,7 @@
                                     "textColor":"whiteColor",
                                     "font":16,
                                     "numberOfLines":0,
-                                    "text":"此图片在各种屏幕都1 : 0.666比例",
+                                    "text":"此图片在各种屏幕都1 : 0.666比例~",
                                     "layout":{"s":"c,b"}
                                     },
                                     {
@@ -38,7 +38,7 @@
                                     "layer.cornerRadius":15,
                                     "font":14,
                                     "addTarget":"AlterLabelText:",
-                                    "title":"点我修改文字",
+                                    "title":"点我修改文字，是真的么",
                                     "titleColor":{
                                     "normal":"greenColor",
                                     "highlighted":"redColor",
