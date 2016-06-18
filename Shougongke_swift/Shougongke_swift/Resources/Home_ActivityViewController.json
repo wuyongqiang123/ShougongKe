@@ -1,0 +1,41 @@
+{
+
+    "defaultCell":{
+        "layout":{"s":"h"},
+        "addSubview":[
+                      {
+                      "class":"UIView",
+                      "backgroundColor":"lightGrayColor",
+                      "layout":{"s":"t,l,w=sw,h=10","tag":1}
+                      },
+                      {
+                      "class":"UIImageView",
+                      "image":"testicon.jpg",
+                      "layout":{"s":"t,w=sw,h=100","asstag":1,"tag":2}
+                      },
+                      {
+                      "class":"UILabel",
+                      "textColor":"blackColor",
+                      "font":{"size":14,"name":"bold"},
+                      "text":"单行的一个标题",
+                      "strTag":"titleLabel",
+                      "layout":{"s":"t=10,l=10,r=10","asstag":2,"tag":3}
+                      },
+                      {
+                      "class":"UILabel",
+                      "textColor":"blackColor",
+                      "font":11,
+                      "tag":7002,
+                      "strTag":"detailLabel",
+                      "text":"asdfasldkfjasdfasdf",
+                      "layout":{"s":"t=5,l,r=10","asstag":3,"tag":4}
+                      },
+                      {
+                      "class":"UIView",
+                      "backgroundColor":"whileColor",
+                      "layout":{"s":"t,l=-10,w=sw,h=10","asstag":4}
+                      }
+                      ]
+    }
+    
+}

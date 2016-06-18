@@ -61,7 +61,7 @@ class BaseViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func createCell(identifier:String)->UITableViewCell {
         return createCell(identifier, nil)
     }
-
+    
     func createCell(identifier:String, _ created:((UITableViewCell)->Void)?)->UITableViewCell{
         var cell = tableView?.dequeueReusableCellWithIdentifier(identifier)
         if(cell == nil){

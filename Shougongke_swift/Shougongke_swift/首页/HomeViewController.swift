@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewController: BaseViewController {
 
+    //选择的哪个vc
     var selectIdex: Int? = 0
     //保存起来防止重复生成VC
     var childVCs = [UIViewController]()

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0433F2561D14D1C0000ED53B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433F2551D14D1C0000ED53B /* Reachability.swift */; };
+		0433F2581D14E049000ED53B /* chatBgImg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0433F2571D14E049000ED53B /* chatBgImg@2x.jpg */; };
+		0433F25A1D14E560000ED53B /* Home_MasterViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = 0433F2591D14E560000ED53B /* Home_MasterViewController.json */; };
 		043CDDA81D1277AD002E1DA6 /* YYMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CDDA71D1277AD002E1DA6 /* YYMenuCollectionViewCell.swift */; };
 		043CDDAC1D127B09002E1DA6 /* dymenu_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 043CDDA91D127B09002E1DA6 /* dymenu_normal.png */; };
 		043CDDAD1D127B09002E1DA6 /* dymenu_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 043CDDAA1D127B09002E1DA6 /* dymenu_selected.png */; };
@@ -26,6 +29,7 @@
 		043CDDEF1D127E7C002E1DA6 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CDDE11D127E7B002E1DA6 /* String+MD5.swift */; };
 		043CDDF01D127E7C002E1DA6 /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CDDE21D127E7B002E1DA6 /* ThreadHelper.swift */; };
 		043CDDF11D127E7C002E1DA6 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CDDE31D127E7B002E1DA6 /* UIButton+Kingfisher.swift */; };
+		045295C61D152262007BCF9D /* Home_ActivityViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = 045295C51D152262007BCF9D /* Home_ActivityViewController.json */; };
 		048037671D12C24100659511 /* CourseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048037661D12C24100659511 /* CourseCategory.swift */; };
 		049BB9BD1D13150500B07FE0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 049BB9A51D13150500B07FE0 /* LICENSE */; };
 		049BB9BE1D13150500B07FE0 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 049BB9A91D13150500B07FE0 /* MJExtensionConst.m */; };
@@ -111,6 +115,11 @@
 		04D3B14E1D124727005EB8AE /* YYMenuDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3B14D1D124727005EB8AE /* YYMenuDataModel.swift */; };
 		04F086B51D139F5300182FF5 /* Home_FollowViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = 04F086B41D139F5300182FF5 /* Home_FollowViewController.json */; };
 		04F087691D13DCE400182FF5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F087681D13DCE400182FF5 /* Alamofire.framework */; };
+		04F087701D13EA2100182FF5 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 04F0876B1D13EA2100182FF5 /* .gitkeep */; };
+		04F087711D13EA2100182FF5 /* BannerPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0876C1D13EA2100182FF5 /* BannerPageViewController.swift */; };
+		04F087721D13EA2100182FF5 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0876D1D13EA2100182FF5 /* BannerViewController.swift */; };
+		04F087731D13EA2100182FF5 /* Reindeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0876E1D13EA2100182FF5 /* Reindeer.swift */; };
+		04F087741D13EA2100182FF5 /* UIView-Reindeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0876F1D13EA2100182FF5 /* UIView-Reindeer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +140,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0433F2551D14D1C0000ED53B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		0433F2571D14E049000ED53B /* chatBgImg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chatBgImg@2x.jpg"; sourceTree = "<group>"; };
+		0433F2591D14E560000ED53B /* Home_MasterViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home_MasterViewController.json; sourceTree = "<group>"; };
 		043CDDA71D1277AD002E1DA6 /* YYMenuCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		043CDDA91D127B09002E1DA6 /* dymenu_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dymenu_normal.png; sourceTree = "<group>"; };
 		043CDDAA1D127B09002E1DA6 /* dymenu_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dymenu_selected.png; sourceTree = "<group>"; };
@@ -151,6 +163,7 @@
 		043CDDE11D127E7B002E1DA6 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
 		043CDDE21D127E7B002E1DA6 /* ThreadHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadHelper.swift; sourceTree = "<group>"; };
 		043CDDE31D127E7B002E1DA6 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		045295C51D152262007BCF9D /* Home_ActivityViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home_ActivityViewController.json; sourceTree = "<group>"; };
 		048037661D12C24100659511 /* CourseCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCategory.swift; sourceTree = "<group>"; };
 		049BB9A51D13150500B07FE0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		049BB9A71D13150500B07FE0 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
@@ -258,6 +271,11 @@
 		04D3B14D1D124727005EB8AE /* YYMenuDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYMenuDataModel.swift; sourceTree = "<group>"; };
 		04F086B41D139F5300182FF5 /* Home_FollowViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home_FollowViewController.json; sourceTree = "<group>"; };
 		04F087681D13DCE400182FF5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Alamofire/build/Debug/Alamofire.framework; sourceTree = "<group>"; };
+		04F0876B1D13EA2100182FF5 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		04F0876C1D13EA2100182FF5 /* BannerPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerPageViewController.swift; sourceTree = "<group>"; };
+		04F0876D1D13EA2100182FF5 /* BannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
+		04F0876E1D13EA2100182FF5 /* Reindeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reindeer.swift; sourceTree = "<group>"; };
+		04F0876F1D13EA2100182FF5 /* UIView-Reindeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView-Reindeer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,12 +312,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		043CDDD31D127E7B002E1DA6 /* Kingfisher */ = {
+		0433F2541D14D1C0000ED53B /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				0433F2551D14D1C0000ED53B /* Reachability.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		043CDDD31D127E7B002E1DA6 /* Kingfisher(图片加载) */ = {
 			isa = PBXGroup;
 			children = (
 				043CDDD41D127E7B002E1DA6 /* LICENSE */,
 				043CDDD61D127E7B002E1DA6 /* Sources */,
 			);
+			name = "Kingfisher(图片加载)";
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -331,13 +358,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		049BB9A41D13150500B07FE0 /* MJExtension */ = {
+		049BB9A41D13150500B07FE0 /* MJExtension(json解析model) */ = {
 			isa = PBXGroup;
 			children = (
 				049BB9A51D13150500B07FE0 /* LICENSE */,
 				049BB9A61D13150500B07FE0 /* MJExtension */,
 				049BB9BC1D13150500B07FE0 /* README.md */,
 			);
+			name = "MJExtension(json解析model)";
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
@@ -445,9 +473,12 @@
 		04A973A61D10E11A00163770 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0433F2571D14E049000ED53B /* chatBgImg@2x.jpg */,
 				04A973BA1D10F6B800163770 /* testicon@2x.jpg */,
 				04A973B81D10F24D00163770 /* Home_SelectedViewController.json */,
 				04F086B41D139F5300182FF5 /* Home_FollowViewController.json */,
+				0433F2591D14E560000ED53B /* Home_MasterViewController.json */,
+				045295C51D152262007BCF9D /* Home_ActivityViewController.json */,
 				04A974B41D114A5D00163770 /* 测试.json */,
 			);
 			path = Resources;
@@ -487,16 +518,18 @@
 		04A973BC1D11043D00163770 /* PublicClass */ = {
 			isa = PBXGroup;
 			children = (
-				049BB9A41D13150500B07FE0 /* MJExtension */,
-				043CDDD31D127E7B002E1DA6 /* Kingfisher */,
+				0433F2541D14D1C0000ED53B /* Reachability */,
+				04F0876A1D13EA2100182FF5 /* Reindeer(图片轮播) */,
+				049BB9A41D13150500B07FE0 /* MJExtension(json解析model) */,
+				043CDDD31D127E7B002E1DA6 /* Kingfisher(图片加载) */,
 				04A9745F1D112ED500163770 /* RDVTabBarController */,
-				04A973EA1D112D4900163770 /* ScrollPageView */,
-				04A973BD1D11044F00163770 /* XWSwiftRefresh */,
+				04A973EA1D112D4900163770 /* ScrollPageView(类是网易的滚动视图) */,
+				04A973BD1D11044F00163770 /* XWSwiftRefresh(上下拉刷新) */,
 			);
 			path = PublicClass;
 			sourceTree = "<group>";
 		};
-		04A973BD1D11044F00163770 /* XWSwiftRefresh */ = {
+		04A973BD1D11044F00163770 /* XWSwiftRefresh(上下拉刷新) */ = {
 			isa = PBXGroup;
 			children = (
 				04A973BE1D11044F00163770 /* common */,
@@ -505,6 +538,7 @@
 				04A973CC1D11044F00163770 /* Helper */,
 				04A973CE1D11044F00163770 /* Icon */,
 			);
+			name = "XWSwiftRefresh(上下拉刷新)";
 			path = XWSwiftRefresh;
 			sourceTree = "<group>";
 		};
@@ -568,7 +602,7 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		04A973EA1D112D4900163770 /* ScrollPageView */ = {
+		04A973EA1D112D4900163770 /* ScrollPageView(类是网易的滚动视图) */ = {
 			isa = PBXGroup;
 			children = (
 				04A973EB1D112D4900163770 /* ContentView.swift */,
@@ -576,6 +610,7 @@
 				04A973ED1D112D4900163770 /* ScrollSegmentView.swift */,
 				04A973EE1D112D4900163770 /* SegmentStyle.swift */,
 			);
+			name = "ScrollPageView(类是网易的滚动视图)";
 			path = ScrollPageView;
 			sourceTree = "<group>";
 		};
@@ -658,6 +693,19 @@
 				04CF7E831D12855400ED5DE3 /* YYMenuView.swift */,
 			);
 			path = "自定义view";
+			sourceTree = "<group>";
+		};
+		04F0876A1D13EA2100182FF5 /* Reindeer(图片轮播) */ = {
+			isa = PBXGroup;
+			children = (
+				04F0876B1D13EA2100182FF5 /* .gitkeep */,
+				04F0876C1D13EA2100182FF5 /* BannerPageViewController.swift */,
+				04F0876D1D13EA2100182FF5 /* BannerViewController.swift */,
+				04F0876E1D13EA2100182FF5 /* Reindeer.swift */,
+				04F0876F1D13EA2100182FF5 /* UIView-Reindeer.swift */,
+			);
+			name = "Reindeer(图片轮播)";
+			path = Reindeer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -765,17 +813,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A974B51D114A5D00163770 /* 测试.json in Resources */,
+				0433F25A1D14E560000ED53B /* Home_MasterViewController.json in Resources */,
 				04A973811D10E02200163770 /* LaunchScreen.storyboard in Resources */,
 				04A974A81D113EF500163770 /* tabbar_background@2x.png in Resources */,
 				043CDDAE1D127B09002E1DA6 /* up_back.png in Resources */,
 				04A9737E1D10E02200163770 /* Assets.xcassets in Resources */,
 				04A973E51D112B8500163770 /* refresh002.png in Resources */,
 				049BB9BD1D13150500B07FE0 /* LICENSE in Resources */,
+				04F087701D13EA2100182FF5 /* .gitkeep in Resources */,
 				04A973B91D10F24D00163770 /* Home_SelectedViewController.json in Resources */,
+				0433F2581D14E049000ED53B /* chatBgImg@2x.jpg in Resources */,
 				04A9737C1D10E02200163770 /* Main.storyboard in Resources */,
 				043CDDE41D127E7B002E1DA6 /* LICENSE in Resources */,
 				04A973BB1D10F6B800163770 /* testicon@2x.jpg in Resources */,
 				04A973DC1D11044F00163770 /* xw_icon.bundle in Resources */,
+				045295C61D152262007BCF9D /* Home_ActivityViewController.json in Resources */,
 				04F086B51D139F5300182FF5 /* Home_FollowViewController.json in Resources */,
 				04A973E31D112B7D00163770 /* refresh001.png in Resources */,
 				043CDDAC1D127B09002E1DA6 /* dymenu_normal.png in Resources */,
@@ -829,6 +881,7 @@
 				043CDDF11D127E7C002E1DA6 /* UIButton+Kingfisher.swift in Sources */,
 				04A974A21D113BC000163770 /* UIImage+YYImage.swift in Sources */,
 				043CDDE81D127E7C002E1DA6 /* ImageDownloader.swift in Sources */,
+				04F087721D13EA2100182FF5 /* BannerViewController.swift in Sources */,
 				04A9747E1D11390100163770 /* WelcomeViewController.swift in Sources */,
 				04A973F21D112D4900163770 /* SegmentStyle.swift in Sources */,
 				04CF7E841D12855400ED5DE3 /* YYMenuView.swift in Sources */,
@@ -852,6 +905,8 @@
 				043CDDEE1D127E7C002E1DA6 /* Resource.swift in Sources */,
 				04A973B11D10E3D500163770 /* YYLogManger.swift in Sources */,
 				043CDDF01D127E7C002E1DA6 /* ThreadHelper.swift in Sources */,
+				0433F2561D14D1C0000ED53B /* Reachability.swift in Sources */,
+				04F087741D13EA2100182FF5 /* UIView-Reindeer.swift in Sources */,
 				04A973EF1D112D4900163770 /* ContentView.swift in Sources */,
 				04A973771D10E02200163770 /* AppDelegate.swift in Sources */,
 				049BB9C01D13150500B07FE0 /* MJProperty.m in Sources */,
@@ -872,11 +927,13 @@
 				04A973D11D11044F00163770 /* XWRefreshComponent.swift in Sources */,
 				04A974AF1D11481300163770 /* Home_FollowViewController.swift in Sources */,
 				04A973E01D111D8B00163770 /* YYRefreshGifHeader.swift in Sources */,
+				04F087731D13EA2100182FF5 /* Reindeer.swift in Sources */,
 				043CDDED1D127E7C002E1DA6 /* KingfisherOptionsInfo.swift in Sources */,
 				049BB9C81D13150500B07FE0 /* README.md in Sources */,
 				043CDDE61D127E7C002E1DA6 /* Image.swift in Sources */,
 				04A973D61D11044F00163770 /* XWRefreshFooter.swift in Sources */,
 				04A974B31D11485700163770 /* Home_ActivityViewController.swift in Sources */,
+				04F087711D13EA2100182FF5 /* BannerPageViewController.swift in Sources */,
 				04A973AB1D10E19700163770 /* EADebugWindow.swift in Sources */,
 				049BB9C31D13150500B07FE0 /* NSObject+MJClass.m in Sources */,
 				04A974661D112ED500163770 /* RDVTabBar.m in Sources */,
@@ -1025,6 +1082,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Shougongke_swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -1042,6 +1100,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Shougongke_swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";

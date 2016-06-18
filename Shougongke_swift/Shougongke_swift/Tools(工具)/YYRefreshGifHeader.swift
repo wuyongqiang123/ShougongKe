@@ -25,15 +25,14 @@ class YYRefreshGifHeader: XWRefreshGifHeader {
 
     override func prepare() {
         super.prepare()
-        self.xw_width = 48
         // 设置即将刷新状态和默认的动画图片
         var idleImages = [UIImage]()
         for i in 0..<4 {
             let image = UIImage(named: String(format: "refresh00%zd", i+1))
             idleImages.append(image!)
         }
-        self.setImages(idleImages, state: .Idle)
-        self.setImages(idleImages, state: .Pulling)
+        self.setImages(idleImages,duration: 0.4, state: .Idle)
+        self.setImages(idleImages,duration: 0.4, state: .Pulling)
     }
 
     override func placeSubvies() {
