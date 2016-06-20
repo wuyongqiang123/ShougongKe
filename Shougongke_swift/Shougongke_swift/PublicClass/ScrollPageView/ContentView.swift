@@ -263,7 +263,7 @@ extension ContentView: UIScrollViewDelegate {
             
         }
         
-        //        print("\(progress)------\(oldIndex)----\(currentIndex)")
+        print("\(progress)------\(oldIndex)----\(currentIndex)")
         
         delegate?.contentViewMoveToIndex(oldIndex, toIndex: currentIndex, progress: progress)
         

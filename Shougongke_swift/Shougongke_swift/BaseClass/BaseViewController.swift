@@ -7,22 +7,28 @@
 //
 
 import UIKit
-import Foundation
 public let defaultCell = "defaultCell"
-class BaseViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class BaseViewController: UIViewController {
 
-    
+    //选择的哪个vc
+    var selectIdex: Int? = 0
+    //保存起来防止重复生成VC
+    var childVCs = [UIViewController]()
     internal var skinParser : SkinParser?
     var tableView: UITableView?
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
     {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-//        self.automaticallyAdjustsScrollViewInsets = false
         skinParser = SkinParser.getParserByName(NSStringFromClass(self.classForCoder))
         skinParser?.eventTarget = self
 
     }
-    
+    //tabbar点击事件
+    func tabBarItemClicked() {
+
+    }
+
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -32,14 +38,21 @@ class BaseViewController: UIViewController,UITableViewDataSource,UITableViewDele
     {
         super.loadView()
         skinParser?.parse("selfView", view:self.view)
+        tableView = self.skinParser?.parse("tableView") as? UITableView
 
-        tableView = UITableView.init(frame: CGRectMake(0,0, AppWidth, AppHeight), style: UITableViewStyle.Plain)
-        // 设置tableView的数据源
+        if (tableView != nil) {
+            self.view.addSubview(tableView!)
+        }
         tableView!.dataSource = self
         // 设置tableView的委托
         tableView!.delegate = self
-        tableView!.separatorStyle = UITableViewCellSeparatorStyle.None
-        self.view.addSubview(tableView!)
+//        tableView = UITableView.init(frame:self.view.bounds, style: UITableViewStyle.Plain)
+//        // 设置tableView的数据源
+//        tableView!.dataSource = self
+//        // 设置tableView的委托
+//        tableView!.delegate = self
+//        tableView!.separatorStyle = UITableViewCellSeparatorStyle.None
+//        self.view.addSubview(tableView!)
 
     }
     override func viewDidLoad()
@@ -106,13 +119,7 @@ class BaseViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
 
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return self.createCell(defaultCell)
-    }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (skinParser?.valueWithName("self", key: "numberOfRowsInSection\(section)") as? Int ?? 0)
-    }
 
 
     #if DEBUG
@@ -155,5 +162,17 @@ class BaseViewController: UIViewController,UITableViewDataSource,UITableViewDele
 
     }
     #endif
+
+}
+
+extension BaseViewController:UITableViewDataSource,UITableViewDelegate {
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return self.createCell(defaultCell)
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (skinParser?.valueWithName("self", key: "numberOfRowsInSection\(section)") as? Int ?? 0)
+    }
 
 }

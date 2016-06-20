@@ -51,7 +51,7 @@ extension UIView{
     ///显示上下线和左边间距
     func showLineForDirection(direction: ZPDirection, pading: ZPPading) {
         //线条的高度
-        let onePx: CGFloat = 1 / min(UIScreen.mainScreen().scale, 2.0)
+        let onePx: CGFloat = 1
             //1 / min(UIScreen.mainScreen().scale, 2.0)
 
         //初始化

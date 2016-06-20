@@ -9,10 +9,7 @@
 import UIKit
 class Home_FollowViewController: BaseViewController {
 
-    override func loadView()
-    {
-        super.loadView()
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.frame = VCHeight

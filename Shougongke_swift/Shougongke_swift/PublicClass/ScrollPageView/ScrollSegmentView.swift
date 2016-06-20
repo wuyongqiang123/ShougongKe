@@ -37,6 +37,8 @@ public class ScrollSegmentView: UIView {
     
     /// 所有的title设置
     public var segmentStyle: SegmentStyle
+
+    
     
     /// 点击响应的closure
     public var titleBtnOnClick:((label: UILabel, index: Int) -> Void)?
@@ -106,6 +108,7 @@ public class ScrollSegmentView: UIView {
         btn.layer.shadowColor = UIColor.whiteColor().CGColor
         btn.layer.shadowOffset = CGSize(width: -5, height: 0)
         btn.layer.shadowOpacity = 1
+        btn.showLineForDirection(ZPDirection.Left)
         return btn
     }()
     
@@ -266,7 +269,8 @@ extension ScrollSegmentView {
 extension ScrollSegmentView {
     private func setupTitles() {
         for (index, title) in titles.enumerate() {
-            
+
+
             let label = CustomLabel(frame: CGRectZero)
             label.tag = index
             label.text = title
@@ -274,15 +278,20 @@ extension ScrollSegmentView {
             label.font = segmentStyle.titleFont
             label.textAlignment = .Center
             label.userInteractionEnabled = true
+
+            let size = (title as NSString).boundingRectWithSize(CGSizeMake(CGFloat(MAXFLOAT), 0.0), options: .UsesLineFragmentOrigin, attributes: [NSFontAttributeName: label.font], context: nil)
+            label.width = size.width
+
             
             let tapGes = UITapGestureRecognizer(target: self, action: #selector(self.titleLabelOnClick(_:)))
             label.addGestureRecognizer(tapGes)
             
-            let size = (title as NSString).boundingRectWithSize(CGSizeMake(CGFloat(MAXFLOAT), 0.0), options: .UsesLineFragmentOrigin, attributes: [NSFontAttributeName: label.font], context: nil)
-            
+
+
             titlesWidthArray.append(size.width)
             labelsArray.append(label)
             scrollView.addSubview(label)
+
         }
     }
     
@@ -328,8 +337,18 @@ extension ScrollSegmentView {
                 titleX = CGFloat(index) * titleW
                 
                 label.frame = CGRect(x: titleX, y: titleY, width: titleW, height: titleH)
-                
-                
+
+                if segmentStyle.titleLine {
+                    let line = UILabel.init(frame:CGRectMake(label.right, 5, 1, 15))
+                    line.backgroundColor = segmentStyle.titleLineColor
+                    YYLogs(line.frame)
+                    if index != labelsArray.count-1 {
+                        scrollView.addSubview(line)
+                    }
+
+                }
+
+
             }
             
         } else {
@@ -343,7 +362,7 @@ extension ScrollSegmentView {
                     titleX = CGRectGetMaxX(lastLabel.frame) + segmentStyle.titleMargin
                 }
                 label.frame = CGRect(x: titleX, y: titleY, width: titleW, height: titleH)
-                
+
             }
             
         }

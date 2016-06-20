@@ -44,7 +44,7 @@ class YYMenuView: UIView {
         let itemView = UIView.init(frame: CGRectMake(0, 0, AppWidth, 40))
         itemView.backgroundColor = ItemBgColor
         itemView.layer.borderWidth = 0.5
-        itemView.layer.borderColor = UIColor.lightGrayColor().CGColor
+        itemView.layer.borderColor = UIColor.clearColor().CGColor
         return itemView
     }()
     lazy var backgroundView: UIView? = {
@@ -149,7 +149,6 @@ class YYMenuView: UIView {
     }
 
     //展开。
-
     func expandWithCollectionViewHeight(collectionViewHeight: CGFloat, cellNumOfRow: Int) {
         //CGFloat(cellNumOfRow)
         self.flowLayout!.itemSize = CGSizeMake(AppWidth / CGFloat(cellNumOfRow), 40)
@@ -157,7 +156,7 @@ class YYMenuView: UIView {
         self.height = AppHeight
         self.bottomBtn?.height = 40
         UIView.animateWithDuration(0.3, animations: {() -> Void in
-            self.backgroundView!.backgroundColor = BgViewColor
+            self.backgroundView!.backgroundColor = UIColor.clearColor()
         })
 
         self.collectionView?.height = collectionViewHeight

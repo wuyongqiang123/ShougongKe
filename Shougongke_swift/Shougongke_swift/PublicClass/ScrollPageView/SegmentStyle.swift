@@ -38,6 +38,10 @@ public struct SegmentStyle {
     public var showLine = false
     /// 是否缩放文字
     public var scaleTitle = false
+    //是否显示title 后面的竖线(默认是不显示)
+    public var titleLine: Bool = false
+    //显示title 后面的竖线颜色
+    public var titleLineColor = UIColor.init(white: 1.0, alpha: 0.5)
     /// 是否可以滚动标题
     public var scrollTitle = true
     /// 是否颜色渐变

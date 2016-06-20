@@ -1,0 +1,53 @@
+
+{
+    "selfView":{
+        "backgroundColor":[255,255,255]
+    },
+    
+    "tableView":
+    {
+        "class":"UITableView",
+        "layout":{"s":"l,r"},
+        "showsHorizontalScrollIndicator":false,
+        "showsVerticalScrollIndicator":false,
+        "backgroundColor":"clearColor",
+        "separatorStyle":"none"
+    },
+    
+    "titleBgView":{
+        "class":"UIView",
+        "backgroundColor":[35,38,50],
+        "layout":{"s":"l,r,t,h=64"}
+    },
+    
+    "titleLeftView":
+    {
+        "class":"UIButton",
+        "backgroundColor":"clearColor",
+        "addTarget":"titleBackClick",
+        "layout":{"s":"l,t=20,w=44,h=44","tag":12},
+        "addSubview":
+        [
+         {
+         "class":"UIImageView",
+         "image":"images/icon_back.png",
+         "layout":{"s":"m,c,w=44,h=44"}
+         }
+         ]
+    },
+    "titleRightView":{
+        "class":"UIView",
+        "backgroundColor":"clearColor",
+        "layout":{"s":"r,t=20,w=44,h=44","tag":14}
+    },
+    "titleMiddleView":
+    {
+        "class":"UILabel",
+        "text":"打听",
+        "layout":{"s":"l=50,r=50,m=10"},
+        "textColor":"whiteColor",
+        "font":{"size":16,"name":"bold"},
+        "textAlignment":"center"
+    }
+}
+

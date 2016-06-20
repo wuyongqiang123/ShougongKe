@@ -8,12 +8,9 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class Home_RootViewController: BaseViewController {
 
-    //选择的哪个vc
-    var selectIdex: Int? = 0
-    //保存起来防止重复生成VC
-    var childVCs = [UIViewController]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "首页"

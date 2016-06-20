@@ -8,9 +8,13 @@
 
 import UIKit
 
-class MyViewController: BaseViewController {
+class My_RootViewController: BaseViewController {
 
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
+        self.title = "我的"
+    }
 
 }

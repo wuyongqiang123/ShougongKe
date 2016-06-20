@@ -1,0 +1,24 @@
+{
+    "说明":"如果有需要，可以在此文件定义一些通用属性,其它文件引用 style就可以了，这样可以快速的修改界面风格",
+    
+    "fontStyle":{
+        "font":18
+    },
+    "greenStyle":{
+        "textColor":"greenColor",
+    },
+    "blueBackStyle":{
+        "backgroundColor":"blueColor"
+    },
+    "redBackStyle":{
+        "backgroundColor":"redColor"
+    },
+    
+    "COLOR":{
+        "K28":[46,190,190],
+        "C28":[130,130,130],
+        "B30":[130,130,130],
+        "K30":[46,190,190],
+        "A30":"#FF000000"
+    }
+}
