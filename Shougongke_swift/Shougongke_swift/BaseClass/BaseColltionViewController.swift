@@ -45,7 +45,7 @@ class BaseColltionViewController: UIViewController {
         colltionView?.backgroundColor = UIColor.whiteColor()
         //设置每一个cell的宽高
         layout!.itemSize = CGSizeMake(AppWidth, 100)
-        self.view .addSubview(colltionView!)
+        self.view.addSubview(colltionView!)
         
     }
     override func viewDidLoad() {
