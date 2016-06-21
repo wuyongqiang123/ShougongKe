@@ -8,14 +8,18 @@
 
 import UIKit
 
-class BaseNavigationController: UINavigationController {
+class BaseNavigationController: UINavigationController,UINavigationControllerDelegate {
 
+    var popDelegate: UIGestureRecognizerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationBar.barTintColor =
             UIColor.init(colorLiteralRed: 235.0/255.0, green: 87.0/255.0, blue: 84.0/255.0, alpha: 1.0)
+
+        self.popDelegate = self.interactivePopGestureRecognizer?.delegate
+        self.delegate = self
     }
 
     override func shouldAutorotate() -> Bool {
@@ -31,6 +35,18 @@ class BaseNavigationController: UINavigationController {
         }
         else {
             return UIInterfaceOrientationMask.Portrait
+        }
+    }
+
+    //UINavigationControllerDelegate方法
+    func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
+        //实现滑动返回功能
+        //清空滑动返回手势的代理就能实现
+        if viewController == self.viewControllers[0] {
+            self.interactivePopGestureRecognizer!.delegate = self.popDelegate
+        }
+        else {
+            self.interactivePopGestureRecognizer!.delegate = nil
         }
     }
 

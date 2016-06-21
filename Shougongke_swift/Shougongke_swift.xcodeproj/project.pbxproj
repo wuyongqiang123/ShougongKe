@@ -35,6 +35,7 @@
 		04408F7D1D18CB7B00BFEB72 /* KGStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408F7C1D18CB7B00BFEB72 /* KGStatusBar.swift */; };
 		04408F7F1D18CCF300BFEB72 /* UIColor+color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408F7E1D18CCF300BFEB72 /* UIColor+color.swift */; };
 		04408F811D18D4C700BFEB72 /* UIDevice+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408F801D18D4C700BFEB72 /* UIDevice+Public.swift */; };
+		04408F831D18EC5A00BFEB72 /* gui_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04408F821D18EC5A00BFEB72 /* gui_back@2x.png */; };
 		045295C61D152262007BCF9D /* Home_ActivityViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = 045295C51D152262007BCF9D /* Home_ActivityViewController.json */; };
 		0458CBA61D168EF500277955 /* ImageTextViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = 0458CBA51D168EF500277955 /* ImageTextViewController.json */; };
 		045DC3541D178A080064E26A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045DC3531D178A080064E26A /* LoginViewController.swift */; };
@@ -190,6 +191,7 @@
 		04408F7C1D18CB7B00BFEB72 /* KGStatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGStatusBar.swift; sourceTree = "<group>"; };
 		04408F7E1D18CCF300BFEB72 /* UIColor+color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+color.swift"; sourceTree = "<group>"; };
 		04408F801D18D4C700BFEB72 /* UIDevice+Public.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Public.swift"; sourceTree = "<group>"; };
+		04408F821D18EC5A00BFEB72 /* gui_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gui_back@2x.png"; path = "../gui_back@2x.png"; sourceTree = "<group>"; };
 		045295C51D152262007BCF9D /* Home_ActivityViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home_ActivityViewController.json; sourceTree = "<group>"; };
 		0458CBA51D168EF500277955 /* ImageTextViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ImageTextViewController.json; sourceTree = "<group>"; };
 		045DC3531D178A080064E26A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -645,6 +647,7 @@
 		04A973E11D112B0600163770 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				04408F821D18EC5A00BFEB72 /* gui_back@2x.png */,
 				04F151FA1D177E2E0015761F /* user_total.png */,
 				04F151FB1D177E2E0015761F /* user_total@2x.png */,
 				04A974A71D113EF500163770 /* tabbar_background@2x.png */,
@@ -908,6 +911,7 @@
 				04A9737E1D10E02200163770 /* Assets.xcassets in Resources */,
 				04A973E51D112B8500163770 /* refresh002.png in Resources */,
 				049BB9BD1D13150500B07FE0 /* LICENSE in Resources */,
+				04408F831D18EC5A00BFEB72 /* gui_back@2x.png in Resources */,
 				04F087701D13EA2100182FF5 /* .gitkeep in Resources */,
 				048EC7901D1755F500F36E8D /* ProductViewController.json in Resources */,
 				04A973B91D10F24D00163770 /* Home_SelectedViewController.json in Resources */,

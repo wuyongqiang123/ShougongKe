@@ -9,6 +9,8 @@
 import UIKit
 
 extension UIViewController {
+
+
        override public class func initialize() {
 
         struct Static {
@@ -21,6 +23,7 @@ extension UIViewController {
         }
 
         dispatch_once(&Static.token) {
+            //交换系统的方法
             Swizzle(UIViewController.self, origSEL: #selector(UIViewController.viewDidAppear(_:)), newSEL: #selector(UIViewController.customViewDidAppear(_:)))
             Swizzle(UIViewController.self, origSEL: #selector(UIViewController.viewWillAppear(_:)), newSEL: #selector(UIViewController.customviewWillAppear(_:)))
             //这个交换方法不行，还在找原因-------------_________-----------

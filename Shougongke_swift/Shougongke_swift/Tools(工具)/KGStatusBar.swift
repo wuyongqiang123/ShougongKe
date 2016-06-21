@@ -16,38 +16,9 @@ enum ApsType : Int {
 class KGStatusBar: UIView {
 
     var apsDict: [NSObject : AnyObject] = [:]
-    lazy var overlayWindow: UIWindow? = {
-        var window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        window.backgroundColor = UIColor.clearColor()
-        window.userInteractionEnabled = false
-        window.windowLevel = UIWindowLevelStatusBar
-        return window
-    }()
-    lazy var topBar: UIView? = {
-       let topBar = UIView(frame: CGRectMake(0, 0, self.overlayWindow!.frame.size.width, 20.0))
-        self.overlayWindow!.addSubview(topBar)
-        return topBar
-    }()
-    lazy var stringLabel: UILabel? = {
-
-        let label = UILabel(frame: CGRectZero)
-        label.textColor = UIColor(red: 191.0 / 255.0, green: 191.0 / 255.0, blue: 191.0 / 255.0, alpha: 1.0)
-        label.backgroundColor = UIColor.clearColor()
-        label.adjustsFontSizeToFitWidth = true
-        label.textAlignment = .Center
-        label.textAlignment = .Center
-        label.baselineAdjustment = .AlignCenters
-        label.font = UIFont.boldSystemFontOfSize(14.0)
-        label.shadowColor = UIColor.blackColor()
-        label.shadowOffset = CGSizeMake(0, -1)
-        label.numberOfLines = 0
-        if (label.superview == nil) {
-            self.topBar!.addSubview(label)
-        }
-        return label
-    }()
+    var overlayWindow: UIWindow?
+    var topBar: UIView?
+    var stringLabel: UILabel?
 
     struct Static {
 
@@ -102,7 +73,7 @@ class KGStatusBar: UIView {
     class func dismiss() {
         KGStatusBar.sharedInstance().dismiss()
     }
-
+    
      override init(frame: CGRect) {
         super.init(frame: frame)
         self.userInteractionEnabled = false
@@ -120,12 +91,36 @@ class KGStatusBar: UIView {
 
     func showWithStatus(status: String, barColor: UIColor, textColor: UIColor) {
         if (self.superview == nil) {
+            self.overlayWindow = UIWindow.init(frame: UIScreen.mainScreen().bounds)
+            self.overlayWindow!.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+            self.overlayWindow!.backgroundColor = UIColor.clearColor()
+            self.overlayWindow!.userInteractionEnabled = false
+            self.overlayWindow!.windowLevel = UIWindowLevelStatusBar
             self.overlayWindow!.addSubview(self)
             self.overlayWindow!.hidden = false
+
+            self.topBar = UIView(frame: CGRectMake(0, 0, self.overlayWindow!.frame.size.width, 20.0))
+            self.topBar!.hidden = false
+            self.topBar!.backgroundColor = barColor
+            self.overlayWindow!.addSubview(self.topBar!)
+
+            self.stringLabel = UILabel(frame: CGRectZero)
+            self.stringLabel!.textColor = UIColor(red: 191.0 / 255.0, green: 191.0 / 255.0, blue: 191.0 / 255.0, alpha: 1.0)
+            self.stringLabel!.backgroundColor = UIColor.clearColor()
+            self.stringLabel!.adjustsFontSizeToFitWidth = true
+            self.stringLabel!.textAlignment = .Center
+            self.stringLabel!.textAlignment = .Center
+            self.stringLabel!.baselineAdjustment = .AlignCenters
+            self.stringLabel!.font = UIFont.boldSystemFontOfSize(14.0)
+            self.stringLabel!.shadowColor = UIColor.blackColor()
+            self.stringLabel!.shadowOffset = CGSizeMake(0, -1)
+            self.stringLabel!.numberOfLines = 0
+            if (self.stringLabel!.superview == nil) {
+                self.topBar!.addSubview(self.stringLabel!)
+            }
         }
 
-        self.topBar!.hidden = false
-        self.topBar!.backgroundColor = barColor
+
         let labelText: NSString = status
         var labelRect: CGRect = CGRectZero
         var stringWidth: CGFloat = 0
@@ -161,7 +156,9 @@ class KGStatusBar: UIView {
             self.stringLabel!.alpha = 0.0
             }, completion: {(finished: Bool) -> Void in
                 self.topBar!.removeFromSuperview()
+                self.topBar = nil
                 self.overlayWindow!.removeFromSuperview()
+                self.overlayWindow = nil
         })
     }
 

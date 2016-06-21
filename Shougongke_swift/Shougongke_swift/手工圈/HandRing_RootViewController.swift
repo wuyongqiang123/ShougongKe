@@ -40,7 +40,7 @@ class HandRing_RootViewController: BaseViewController {
             self.selectIdex = index
         }
         scrollPageView.extraBtnOnClick = {[unowned self] (extraBtn: UIButton) in
-
+            KGStatusBar.showWithStatus("你说的啥跟傻")
             let arrange = ArrangeTagsViewController()
             self.navigationController?.pushViewController(arrange, animated: true)
         }

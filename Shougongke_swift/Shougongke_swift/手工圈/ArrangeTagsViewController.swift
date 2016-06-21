@@ -40,8 +40,14 @@ class ArrangeTagsViewController: UIViewController {
         //设置每一个cell的宽高
         layout.itemSize = CGSizeMake((AppWidth-50)/4, 30)
         self.view .addSubview(colltionView!)
-    }
 
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(leftimageName: "gui_back.png", highlImageName:"", targer: self, action: #selector(ArrangeTagsViewController.backAction))
+
+        KGStatusBar.dismiss()
+    }
+    func backAction() {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     deinit {
         print("释放了么")
     }
