@@ -42,6 +42,10 @@ class ArrangeTagsViewController: UIViewController {
         self.view .addSubview(colltionView!)
     }
 
+    deinit {
+        print("释放了么")
+    }
+
 }
 
 extension ArrangeTagsViewController:UICollectionViewDataSource,UICollectionViewDelegate {

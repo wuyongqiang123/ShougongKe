@@ -66,6 +66,8 @@ class Market_RootViewController: BaseViewController {
         return childVCs
     }
 
+    
+
     override func freshSkin() {
 
         let vc = self.setChildVcs()[self.selectIdex!] as! BaseViewController

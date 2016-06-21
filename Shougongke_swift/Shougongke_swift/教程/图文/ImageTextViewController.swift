@@ -17,10 +17,7 @@ class ImageTextViewController: UIViewController {
     }()
 //    var colltionView: UICollectionView?
     private var number:[Int] = []
-    override func loadView()
-    {
-        super.loadView()
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.frame = VCHeight

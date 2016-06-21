@@ -91,9 +91,9 @@ class course_RootViewController: BaseViewController {
 
     override func freshSkin() {
 
-        let vc = self.setChildVcs()[self.selectIdex!] as! BaseViewController
-        YYLogs(vc)
-        vc.freshSkin()
+//        let vc = self.setChildVcs()[self.selectIdex!] as! BaseViewController
+//        YYLogs(vc)
+//        vc.freshSkin()
     }
 }
 

@@ -112,6 +112,18 @@ class ProductViewController: BaseViewController {
 
     }
 
+    //表头随着tableView一起滚动
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let sectionHeaderHeight: CGFloat = 40
+        if scrollView.contentOffset.y <= sectionHeaderHeight && scrollView.contentOffset.y >= 0 {
+            scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0)
+        }
+        else if scrollView.contentOffset.y >= sectionHeaderHeight {
+            scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0)
+        }
+        
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
