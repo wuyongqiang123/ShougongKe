@@ -60,9 +60,6 @@ class Market_RootViewController: BaseViewController {
             vc2.title = "材料"
             childVCs = [vc1, vc2]
         }
-
-
-
         return childVCs
     }
 

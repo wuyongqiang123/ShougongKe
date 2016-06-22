@@ -9,9 +9,14 @@
 import UIKit
 
 
+typealias YYMenuSelectIndexBlock = (itemIndex: NSInteger,cellIndex: NSInteger)->()
 
 class YYMenuView: UIView {
 
+    var selectBlock: YYMenuSelectIndexBlock = {_,_ in }
+    func SelectIndexBlock(block:YYMenuSelectIndexBlock) {
+        self.selectBlock = block
+    }
     //懒加载
     lazy var selectedColor: UIColor? = {
         let color = UIColor.redColor()
@@ -241,7 +246,7 @@ extension YYMenuView:UICollectionViewDelegate,UICollectionViewDataSource {
         self.currentItem!.selectedIndex = indexPath.row
         let model: YYMenuDataModel = self.collectionDataArray[indexPath.row] as! YYMenuDataModel
         self.currentItem!.setTitle(model.titles, forState: .Normal)
-        //self.selectBlock!(itemIndex: self.currentItem!.tag - MenuItemTagAdd, cellIndex: self.currentItem!.selectedIndex!)
+        self.selectBlock(itemIndex: self.currentItem!.tag - MenuItemTagAdd, cellIndex: self.currentItem!.selectedIndex!)
         YYLogs(model.titles)
         self.takeBackCollectionView()
     }

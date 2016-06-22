@@ -48,6 +48,7 @@ class ArrangeTagsViewController: UIViewController {
     func backAction() {
         self.navigationController?.popViewControllerAnimated(true)
     }
+
     deinit {
         print("释放了么")
     }
@@ -89,10 +90,8 @@ extension ArrangeTagsViewController:UICollectionViewDataSource,UICollectionViewD
 
     //返回自定义HeadView或者FootView，我这里以headview为例
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView{
-        let headerTag = 1314520
         let header = colltionView!.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "headView", forIndexPath: indexPath)
         let lb = UILabel(frame: CGRectMake(9, 14, header.width - 18, 15))
-        lb.tag = headerTag
         lb.font = UIFont.systemFontOfSize(28)
         lb.textColor = UIColor.blackColor()
         lb.text = indexPath.section == 0 ? "已选择标签": "标记出你的兴趣"

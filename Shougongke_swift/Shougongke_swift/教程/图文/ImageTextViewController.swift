@@ -8,28 +8,41 @@
 
 import UIKit
 
-class ImageTextViewController: BaseColltionViewController {
+class ImageTextViewController: UIViewController {
 
     lazy var menuView: YYMenuView? = {
         let menu = YYMenuView.init(frame: CGRectMake(0, 64, AppWidth, 40))
+        menu.SelectIndexBlock({ (itemIndex, cellIndex) in
+            print("\(itemIndex),\(cellIndex)")
+        })
         menu.deselectColor = UIColor.darkGrayColor()
         return menu
     }()
-//    var colltionView: UICollectionView?
+    var colltionView: UICollectionView?
     private var number:[Int] = []
-    
+
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+
         view.frame = VCHeight
         self.menuView!.configureView(["全部分类","一周","最新更新"])
         self.view.addSubview(self.menuView!)
 
-        for i in 0...8 {
+        for i in 0...15 {
             number.append(i)
         }
-        self.colltionView?.frame = CGRectMake(0, (self.menuView?.bottom)!, AppWidth, view.height-self.menuView!.height)
+        let layout = UICollectionViewFlowLayout()
+        colltionView = UICollectionView(frame: CGRectMake(0, (self.menuView?.bottom)!, AppWidth, view.height), collectionViewLayout: layout)
+        //注册一个cell
+        colltionView!.registerClass(ImageTextCell.self, forCellWithReuseIdentifier:"ImageTextCell")
+        colltionView?.delegate = self;
+        colltionView?.dataSource = self;
+
+        colltionView?.backgroundColor = UIColor.whiteColor()
         //设置每一个cell的宽高
-        self.layout!.itemSize = CGSizeMake((AppWidth-30)/2, 100)
+        layout.itemSize = CGSizeMake((AppWidth-30)/2, 200)
+        self.view .addSubview(colltionView!)
 
     }
 
@@ -46,36 +59,40 @@ class ImageTextViewController: BaseColltionViewController {
 
 }
 
-extension ImageTextViewController  {
+extension ImageTextViewController:UICollectionViewDataSource,UICollectionViewDelegate  {
 
+    //返回多少个组
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+
+        return 1
+    }
     //返回多少个cell
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return number.count
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
+        return 15
     }
     //返回自定义的cell
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 
-        let cell = createCell(defaultColltionCell, indexPath: indexPath)
-        cell.bindByTag("titleLabel", data: "我是第(\(indexPath.row)行Title)")
-        cell.bindByTag(7002, data: "我是第(\(indexPath.row)行DetailText)")
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ImageTextCell", forIndexPath: indexPath) as! ImageTextCell
+
+
+        cell.titleLabel!.text = "不织布"
+        cell.titleName?.text = "by 刘丽姨liay"
+        cell.titleOther?.text = "0人气 / 0收嚐"
+
+
         return cell
     }
+    
     //返回cell 上下左右的间距
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets{
         return UIEdgeInsetsMake(5, 10, 5, 10)
     }
 
-     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
 
-        let cell = createCell(defaultColltionCell,indexPath: indexPath)
-        cell.bindByTag("titleLabel", data: "我是第\(indexPath.row)行Title")
-        cell.bindByTag(7002, data: "我是第\(indexPath.row)行DetailText")
-        var frame = cell.frame
-        frame.size.width = colltionView!.frame.size.width
-        cell.frame = frame
-        cell.spUpdateLayout()
-        cell.calcHeight()
-        return CGSizeMake(cell.width, cell.height)
     }
 
 }

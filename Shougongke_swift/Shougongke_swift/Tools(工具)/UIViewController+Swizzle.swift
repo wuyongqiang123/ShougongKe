@@ -27,8 +27,8 @@ extension UIViewController {
             Swizzle(UIViewController.self, origSEL: #selector(UIViewController.viewDidAppear(_:)), newSEL: #selector(UIViewController.customViewDidAppear(_:)))
             Swizzle(UIViewController.self, origSEL: #selector(UIViewController.viewWillAppear(_:)), newSEL: #selector(UIViewController.customviewWillAppear(_:)))
             //这个交换方法不行，还在找原因-------------_________-----------
-            Swizzle(UIViewController.self, origSEL:Selector("deinit"), newSEL: #selector(UIViewController.new_deinit))
-        }//deinit
+//            Swizzle(UIViewController.self, origSEL:Selector("delloc"), newSEL: #selector(UIViewController.new_deinit))
+        }
     }
 
     func customViewDidAppear(animated: Bool) {
@@ -49,19 +49,19 @@ extension UIViewController {
         self.customviewWillAppear(animated)
     }
 
-    func new_deinit() {
-        let message: String = "[标题:\(self.title)],[类:\(NSStringFromClass(self.classForCoder))]"
-        if UIDevice.isSimulator() {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(UInt64(1.5) * NSEC_PER_SEC)), dispatch_get_main_queue(), {
-                KGStatusBar.dismiss()
-            })
-            KGStatusBar.showWithStatus(message)
-            self.new_deinit()
-            return
-        }
-        print("deinit %@", message)
-        self.new_deinit()
-    }
+//    func new_deinit() {
+//        let message: String = "[标题:\(self.title)],[类:\(NSStringFromClass(self.classForCoder))]"
+//        if UIDevice.isSimulator() {
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(UInt64(1.5) * NSEC_PER_SEC)), dispatch_get_main_queue(), {
+//                KGStatusBar.dismiss()
+//            })
+//            KGStatusBar.showWithStatus(message)
+//            self.new_deinit()
+//            return
+//        }
+//        print("deinit %@", message)
+//        self.new_deinit()
+//    }
 }
 
 

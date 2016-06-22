@@ -12,7 +12,7 @@ import UIKit
 public let AppWidth: CGFloat = UIScreen.mainScreen().bounds.size.width
 public let AppHeight: CGFloat = UIScreen.mainScreen().bounds.size.height
 public let MainBounds: CGRect = UIScreen.mainScreen().bounds
-public let VCHeight = CGRectMake(0, 0, AppWidth, AppHeight-64-50-44)
+public let VCHeight = CGRectMake(0, 0, AppWidth, AppHeight-64-50-40)
 
 public let MenuItemTagAdd = 1000
 public let MenuCellHeight = 40.0
